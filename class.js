@@ -32,28 +32,34 @@ and attributes in the page.
 
 /******************  DEMO  **********************/
 
-const demo = document.getElementById("demo");
+// const demo = document.getElementById("demo");
 
-demo.innerText = "Document Object Model - DOM";
+// demo.innerText = "Document Object Model - DOM";
 
-demo.addEventListener("mousemove", handleClick);
+// demo.addEventListener("mousemove", handleClick);
 
-function handleClick(event){
+// function handleClick(event){
 
-    demo.innerText = `You clicked on x:${event.x}
-    y:${event.y}`;
+//     demo.innerText = `You clicked on x:${event.x}
+//     y:${event.y}`;
 
-    if(event.x > 300) {
-        demo.style.backgroundColor = "orange";
-    } else {
-        demo.style.backgroundColor = "green";
-    }
-}
+//     if(event.x > 300) {
+//         demo.style.backgroundColor = "orange";
+//     } else {
+//         demo.style.backgroundColor = "green";
+//     }
+// }
 
-// adding eventListener
+// // adding eventListener
 
-demo.addEventListener("click", () => {
-    const newElement = document.createElement("div");
-    newElement.innerText = "Hello";
-    document.body.appendChild(newElement);
-});
+// demo.addEventListener("click", () => {
+//     const newElement = document.createElement("div");
+//     newElement.innerText = "Hello";
+//     document.body.appendChild(newElement);
+// });
+
+/***********
+ * For Input: there is one specific attribute to access
+    the inner contents/text  i.e the "value"
+ * The appendChild() method appends a node (element) as the last child of an element
+ */
