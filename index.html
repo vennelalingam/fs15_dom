@@ -13,12 +13,36 @@
     <h1 id="header">Portfolio</h1>
     <div id="projectsContainer" class="container"></div>
     <form id="form">
+        <!-- Title -->
+        <h4>Project Title</H4>
         <input
-            id="input"
-            type="url"
-            placeholder="add url here"
+            type="text"
+            id="projectTitle"
+            placeholder="add project title here"                       
         />
-        <button id="button">Click</button>
+        <!-- Image -->
+        <h4>Image URL</h4>
+        <input
+            id="projectImage"
+            type="url"
+            placeholder="add image url here"
+        />
+        <br/>
+        <br/>
+        <h4>Project Description</h4>
+        <!-- Description -->
+        <textarea
+            type="text"
+            id="projectDescription"
+            cols="50"
+            rows="10"
+            class="projectDescription"
+            placeholder="add project description here"           
+        >
+        </textarea>
+        <br />
+        <br />
+        <button id="button">Submit</button>
     </form>
     <script type="text/javascript" src="class.js"></script>
     <script type="text/javascript" src="index.js"></script>

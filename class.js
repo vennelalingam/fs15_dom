@@ -60,6 +60,6 @@ and attributes in the page.
 
 /***********
  * For Input: there is one specific attribute to access
-    the inner contents/text  i.e the "value"
+    the inner contents/text  i.e the "value" => "input.value"
  * The appendChild() method appends a node (element) as the last child of an element
  */
