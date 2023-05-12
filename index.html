@@ -10,9 +10,21 @@
 <body id="body">
     <!-- <h2 id="demo">DOM - Portfolio</h2> class.js --> 
     <!-- <button id="demo">Click</button> -->
-    <h1 id="header">Portfolio</h1>
-    <div id="projectsContainer" class="container"></div>
+    <h1>Portfolio</h1>
+        <div class="displayPicsInfo container">
+        <div id="displayPic" class="col-6">
+            <img id="featuredImage" src="" alt="" />
+        </div>
+        <div id="displayInfo" class="col-6">
+            <h3 id="featuredTitle"></h3>
+            <p id="featuredDescription"></p>
+        </div>
+    </div>
+    <div id="projectsContainer" class="container">
+        <div class="row" id="div"></div>
+    </div>
     <form id="form">
+        
         <!-- Title -->
         <h4>Project Title</H4>
         <input

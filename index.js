@@ -14,15 +14,25 @@ const projectDescription = document.getElementById("projectDescription");
 // const form = document.getElementById("form");
 const projectsContainer = document.getElementById("projectsContainer");
 const newDiv = document.createElement("div");
-
+const featuredImage = document.getElementById("featuredImage");
+const featuredTitle = document.getElementById("featuredTitle");
+const featuredDescription = document.getElementById("featuredDescription");
 const projects = [];
 // Add / Display Image on screen
-function addImage(event){
-    event.preventDefault();
+// let counter = 0;
+
+function addImage(e){   
+    e.preventDefault();
+
     // 3. create a new image element
     const img = document.createElement("img");
 
-    newDiv.appendChild(img)
+    newDiv.appendChild(img);
+
+    // counter++;
+    // img.id = counter;
+
+    const index = projects.length;
 
     // 2b. Get the contents of the input
     // 4. use those contents as the "src" of the image
@@ -41,11 +51,19 @@ function addImage(event){
     // do appendChild: so it appends a node(element)
     // as the last child of the element
 
-    //store the project information
+// adding an eventListener to know which image was clicked
+    img.addEventListener("click", (e) => {
+        // console.log("clicked");
+        displayFeaturedImage(index);
+    });
+
+      //store the project information
     const project = {
         title: projectTitle.value,
         image: projectImage.value,
-        description: projectDescription.value
+        description: projectDescription.value,
+        // id: counter
+        
     };
     // console.log(project);
     projects.push(project);
@@ -62,5 +80,16 @@ function addImage(event){
 // in the browser directly
 
 
+  function displayFeaturedImage(index) {
+    // console.log(`clicked on image number ${e.target.id}`);
+    // console.log(e.target.id)
+    // const projectFound = projects.find((element) => element.id === +e.target.id);
+    const projectFound = projects[index];
+    console.log(projectFound);
+    featuredImage.src = projectFound.image; 
+    featuredTitle.innerText = projectFound.title;
+    featuredDescription.innerText = projectFound.description;
+    
+}
 
 
